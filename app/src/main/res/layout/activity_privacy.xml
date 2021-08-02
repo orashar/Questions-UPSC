@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FF00B4DB"
+    tools:context=".PrivacyActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:background="@drawable/toolbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:src="@drawable/ic_back"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/home_head_tv"
+            android:text="Privacy Info"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_above="@id/image"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Your data has no harm from us."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_centerInParent="true"
+        android:src="@drawable/privacy_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_access_denied"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+
+    <TextView
+        android:textSize="16sp"
+        android:layout_below="@id/image"
+        android:layout_marginTop="24dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="We do not steal or collect any of your personal data!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

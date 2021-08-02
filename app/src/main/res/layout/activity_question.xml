@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#efefef">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@drawable/toolbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:src="@drawable/ic_back"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/head_tv"
+                    android:text="Question"
+                    android:textSize="20sp"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/share_iv"
+                    android:src="@drawable/ic_share"
+                    android:layout_toLeftOf="@id/save_iv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/save_iv"
+                    android:src="@drawable/ic_bookmark"
+                    android:layout_toLeftOf="@+id/note_iv"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/note_iv"
+                    android:src="@drawable/ic_note"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <ImageView
+            android:id="@+id/question_iv"
+            android:layout_below="@id/toolbar"
+            android:layout_marginLeft="36dp"
+            android:src="@drawable/ic_question"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:id="@+id/edit_iv"
+            android:src="@drawable/ic_edit"
+            android:layout_marginRight="18dp"
+            android:layout_alignTop="@id/question_iv"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:id="@+id/main_scroll"
+            android:layout_below="@id/question_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp">
+
+                    <TextView
+                        android:id="@+id/question_tv"
+                        android:textColor="#897F7F"
+                        android:textSize="20sp"
+                        android:text="Question data unavailable"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="18dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <EditText
+                        android:id="@+id/question_et"
+                        android:visibility="gone"
+                        android:background="@drawable/question_edit_et_bg"
+                        android:textColor="#897F7F"
+                        android:textSize="18sp"
+                        android:gravity="start"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Tags"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:alpha="0.8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:background="#4e4e4e"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/tags_scroll"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/tags_ll"
+                        android:layout_marginTop="8dp"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"/>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Notes"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:alpha="0.8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:background="#4e4e4e"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <ImageView
+
+                        android:id="@+id/new_notes_iv"
+                        android:src="@drawable/ic_add_new_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/notes_tv"
+                        android:visibility="gone"
+                        android:textColor="#897F7F"
+                        android:textSize="18sp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="18dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <EditText
+                        android:id="@+id/notes_et"
+                        android:visibility="gone"
+                        android:background="@drawable/question_edit_et_bg"
+                        android:textColor="#897F7F"
+                        android:textSize="18sp"
+                        android:gravity="start"
+                        android:layout_margin="8dp"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_sheet"
+        android:background="#fff"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/line_view"
+            android:background="#b7a4a4"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="150dp"
+            android:layout_height="3dp"/>
+
+        <TextView
+            android:id="@+id/tap_tv"
+            android:layout_below="@id/line_view"
+            android:gravity="center"
+            android:textColor="#0500DF"
+            android:textSize="16sp"
+            android:text="Tap to add tags"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <ListView
+            android:id="@+id/list_tags"
+            android:layout_below="@id/tap_tv"
+            android:layout_above="@id/search_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/search_ll"
+            android:background="#fff"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/create_tag_ll"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:src="@drawable/ic_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="  Create  "
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"/>
+
+                <TextView
+                    android:id="@+id/create_tag_tv"
+                    android:text="Tag"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="52dp"
+                android:background="@drawable/search_tag_item_bg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <EditText
+                    android:id="@+id/search_tag_et"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:maxLength="50"
+                    android:inputType="text"
+                    android:hint="type to search"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:src="@drawable/ic_search_brown"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

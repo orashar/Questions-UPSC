@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.orashar.android.questions">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.orashar.android.questions.PrivacyActivity"/>
+        <activity android:name="com.orashar.android.questions.SplashActivity" />
+        <activity android:name="com.orashar.android.questions.IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.orashar.android.questions.FeedbackActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.orashar.android.questions.DataFiles.TransactionsProvider"
+            android:authorities="com.orashar.android.questions"
+            android:exported="false" />
+
+        <activity
+            android:name="com.orashar.android.questions.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orashar.android.questions.QuestionInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.orashar.android.questions.AddQuestionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

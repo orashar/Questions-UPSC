@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:icon="@drawable/ic_drawer_all"
+            android:id="@+id/drawer_all"
+            android:title="All" />
+
+
+        <item
+            android:icon="@drawable/ic_drawer_upsc"
+            android:id="@+id/drawer_upsc"
+            android:title="UPSC"/>
+
+
+        <item
+            android:icon="@drawable/ic_drawer_insight"
+            android:id="@+id/drawer_insight"
+            android:title="Insight"/>
+
+        <item
+            android:icon="@drawable/ic_drawer_saved"
+            android:id="@+id/drawer_saved"
+            android:title="Saved"/>
+
+        <item
+            android:icon="@drawable/ic_drawer_tags"
+            android:id="@+id/drawer_tags"
+            android:title="Tags"/>
+
+    </group>
+
+    <item
+        android:icon="@drawable/ic_drawer_add"
+        android:id="@+id/drawer_add_question"
+        android:title="Add Question"/>
+
+
+
+
+    <item android:iconTint="#fff" android:title="Contact us">
+
+        <menu>
+            <item
+                android:icon="@drawable/ic_drawer_feedback"
+                android:id="@+id/drawer_contact_feedback"
+                android:title="Feedback"/>
+
+
+
+            <item
+                android:icon="@drawable/ic_drawer_privacy"
+                android:id="@+id/drawer_settings_privacy"
+                android:title="Privacy"/>
+
+        </menu>
+    </item>
+
+
+</menu>

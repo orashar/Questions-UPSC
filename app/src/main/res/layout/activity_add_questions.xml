@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#efefef"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddQuestionsActivity">
+
+    <RelativeLayout
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@drawable/toolbar_bg"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_height="70dp">
+
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_iv"
+                android:src="@drawable/ic_back"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/head_tv"
+                android:text="Add Question"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:layout_toRightOf="@id/back_iv"
+                android:paddingLeft="24dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/info_iv"
+                android:src="@drawable/ic_info"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/save_btn"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:text="save"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <HorizontalScrollView
+            android:id="@+id/scroll"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/tag_group"
+                app:singleLine="false"
+                app:chipSpacing="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </HorizontalScrollView>
+
+        <EditText
+            android:id="@+id/questions_et"
+            android:hint="\t\t\t\t\tStart Writing here..."
+            android:textColorHint="#4e4e4e"
+            android:layout_below="@id/scroll"
+            android:background="#fafafa"
+            android:layout_margin="8dp"
+            android:gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_sheet"
+        android:background="#fff"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/line_view"
+            android:background="#b7a4a4"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="150dp"
+            android:layout_height="3dp"/>
+
+        <TextView
+            android:id="@+id/tap_tv"
+            android:layout_below="@id/line_view"
+            android:gravity="center"
+            android:textColor="#0500DF"
+            android:textSize="16sp"
+            android:text="Tap to add tags"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <ListView
+            android:id="@+id/list_tags"
+            android:layout_below="@id/tap_tv"
+            android:layout_above="@id/search_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/search_ll"
+            android:background="#fff"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/create_tag_ll"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <ImageView
+                    android:src="@drawable/ic_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:text="  Create  "
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"/>
+
+                <TextView
+                    android:id="@+id/create_tag_tv"
+                    android:text="Tag"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="52dp"
+                android:background="@drawable/search_tag_item_bg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="52dp"
+                android:layout_marginStart="16dp">
+
+                <EditText
+                    android:id="@+id/search_tag_et"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:maxLength="50"
+                    android:hint="type to search"
+                    android:inputType="text"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp" />
+
+                <ImageView
+                    android:src="@drawable/ic_search_brown"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

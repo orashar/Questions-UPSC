@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Questions</string>
+    <string name="app_link"> https://play.google.com/store/apps/details?id=com.orashar.android.questions </string>
+
+
+    <!--AddQuestionActivity-->
+    <string name="info_not_available">"Information not available!"</string>
+    <string name="empty_data_warning">"Can not add empty data!"</string>
+    <string name="success">"Success"</string>
+    <string name="unknown_error">"Something went wrong"</string>
+    <string name="tag_btmsheet_tap_open">"Tap to add tags"</string>
+    <string name="tag_btmsheet_tap_close">"Tap to close"</string>
+
+    <!--QuestionInfoActivity-->
+    <string name="question_not_found">"Question not available"</string>
+
+
+    <string name="drawer_header">Questions - UPSC</string>
+    <string name="delete_tag_alert_message">"Are you sure want to delete?"</string>
+    <string name="delete_tag_alert_title">"Delete Tag!"</string>
+    <string name="duplicate_tag_alert_title">"Duplicate Tag"</string>
+    <string name="duplicate_tag_alert_message">"Tag with same name already exists!"</string>
+</resources>
